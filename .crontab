@@ -1,0 +1,4 @@
+*/10 * * * * /usr/local/bin/node /conkero/jobs/heartbeat.js
+35 0 * * * /usr/local/bin/node /conkero/jobs/productsDaily.js
+5 1 * * * /usr/local/bin/node /conkero/jobs/ordersDaily.js
+15 1 * * * /usr/local/bin/node /conkero/jobs/financesDaily.js

@@ -1,0 +1,45 @@
+env:
+  browser: false
+  es2021: true
+extends:
+  # - canonical
+  - standard
+  - canonical/node
+  - plugin:node/recommended
+overrides: []
+parserOptions:
+  ecmaVersion: latest
+  sourceType: module
+rules:
+  node/no-process-env: off
+  node/no-process-exit: off
+  no-process-exit: off
+  curly:
+    - error
+    - multi-line
+  no-template-curly-in-string: error
+  prefer-template: error
+  node/no-unsupported-features/es-syntax: off
+  no-prototype-builtins: error
+  dot-location:
+    - 2
+    - property
+  function-call-argument-newline:
+    - error
+    - always
+  function-paren-newline:
+    - error
+    - minItems: 2
+  max-lines-per-function:
+    - error
+    - max: 100
+  newline-per-chained-call:
+    - error
+    - ignoreChainWithDepth: 1
+  object-property-newline: error
+  object-curly-spacing:
+    - error
+    - always
+  object-curly-newline:
+    - error
+    - minProperties: 2

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  conkero:
+    container_name: conkero
+    restart: always
+    image: conkero:latest
+    environment:
+      - TZ=America/Los_Angeles
+    volumes:
+      - .crontab:/conkero/.crontab
+      - ./dbCreds.js:/conkero/dbCreds.js
+      - ./start.sh:/conkero/start.sh
+      - ./logs/:/conkero/logs
+      - ./jobs:/conkero/jobs
+      - ./lib:/conkero/lib
+      - ./src:/conkero/src
+    command: [ "bash", "/conkero/start.sh" ]
